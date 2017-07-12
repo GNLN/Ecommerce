@@ -1,0 +1,23 @@
+{% extends 'order/base.html' %}
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1> Products you have bought </h1>
+</div>
+
+<div class="container text-center">
+    <div class="row text-center">
+        {% for product_order in all_products_list %}
+            <div class="col-md-4">
+                <a href ="/order/products/{{product_order.ProdId.ProdId}}"><h3>{{product_order.ProdId.PName}} </h3></a>
+                <img src="{{product_order.ProdId.Prourl}}" class="img-rounded" height="100" width="100">
+                <h1></h1>
+                <h4><em>Price </em>{{product_order.ProdId.PPrice}}</h4>
+                <h4><em>Quantity </em>{{product_order.ProdId.PQuantity}}</h4>
+             </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends 'order/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Return Information</h1>
+    <table class="table table-striped">
+        <tr>
+            <th></th>
+            <th>Product Information</th>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td>{{return_order.ProductId.ProdId.PName}}</td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td>{{return_order.RTimeStamp}}</td>
+        </tr>
+        <tr>
+            <td>Return Reason</td>
+            <td>{{return_order.ReturnReason}} </td>
+        </tr>
+            <td>Return Feedback</td>
+            <td>{{return_order.ReturnOptions}} </td>
+        </tr>
+        <tr>
+            <td>Product Quality</td>
+            <td>{{return_order.ProductQuality}}</td>
+        </tr>
+    </table>
+    <h3><a href="{% url 'order:return_items' %}">Back to Return Page</a> </h3>
+</div>
+
+{% endblock %}

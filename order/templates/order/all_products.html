@@ -1,0 +1,25 @@
+{% extends 'order/base.html' %}
+{% block body %}
+
+    <div class="jumbotron jumbotron-fluid text-center">
+    <h1> Welcome to the Products Page </h1>
+    </div>
+
+<div class="container text-center">
+    <div class="row text-center">
+        {% for product_order in all_Products %}
+        <div class="col-md-4">
+        <img src="{{product_order.Prourl}}" height="100" width="100">
+        <br><br>
+
+        <b><a href ="/order/product/detail/{{product_order.ProdId}}">{{product_order.PName}}</a></b>
+        </br>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+</div>
+{% endblock %}

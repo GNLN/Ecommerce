@@ -1,0 +1,42 @@
+{% extends 'order/base.html' %}
+{% block body %}
+
+    <div class="jumbotron jumbotron-fluid text-center">
+    <h1> Welcome to the Return Page </h1>
+    </div>
+
+<div class="container text-center">
+    <div class="row text-center">
+        {% for return_order in all_Return %}
+        <div class="col-md-4">
+        <div class="panel panel-primary">
+            <h4><a href="{% url 'order:detail' return_order.ReturnId %}"> {{return_order.ProductId.ProdId.PName}} </a></h4>
+        <img src="{{return_order.ProductId.ProdId.Prourl}}" height="150" width="150">
+        <br><br>
+
+        <a href="{% url 'order:update_return' return_order.ReturnId %}"> Update </a>
+        </br>
+        <form action="{% url 'order:delete_return' return_order.ReturnId %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <input type="hidden" name="return_id" value="{{return_order.ReturnId}}"/>
+            <button type="submit" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+
+        <br><br>
+        </form>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <h2><a href="{% url 'order:add_return' %}">Add Return</a> </h2>
+      </div>
+    </footer>
+</div>
+
+
+</div>
+{% endblock %}

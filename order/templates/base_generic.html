@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>EKART</title>
+		{% load staticfiles %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'order/css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.html" class="logo">Ekart</a>
+				<nav class="right">
+					<a href="{% url 'login'%}" class="button alt">Log in</a>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="{% url 'login'%}" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<h1>Ekart</h1>
+					<p>One Stop Shopping<br />Customer Service Redefined.</p>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">Get Started</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item left">
+						<div>
+							<h3>Buy New Products</h3>
+							<p>From a never ending list of products<br /> buy the products you love.</p>
+						</div>
+						<div>
+							<h3>Return your products</h3>
+							<p>If you do not like a product<br /> return it without second thought.</p>
+						</div>
+					</div>
+					<div class="flex-item image fit round">
+						<img src="{% static 'order/images/pic01.jpg' %}" alt="" />
+					</div>
+					<div class="flex-item right">
+						<div>
+							<h3>Track Product Status</h3>
+							<p>View the status of all you products<br /> both ordered and retutrned.</p>
+						</div>
+						<div>
+							<h3>Manage Products</h3>
+							<p>Cancel and update all products<br /> at anytime with one click.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<h2>Mission</h2>
+					<figure>
+					    <blockquote>
+					        "I think frugality drives innovation, just like other constraints do.
+							<br /> One of the only ways to get out of a tight box is to invent your way out."
+					    </blockquote>
+					    <footer>
+					        <cite class="author">Jeff Bezos</cite>
+					        <cite class="company">CEO, Ekart</cite>
+					    </footer>
+					</figure>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="{% static 'order/images/pic2.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Buy New Product</h3>
+							<p>From a never ending list of products buy the products you love.</p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="{% static 'order/images/pic3.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Return your products</h3>
+							<p>If you do not like a product return it without second thought.View the status of all you products both ordered and retutrned.</p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="{% static 'order/images/pic4.jpg' %}" alt="" />
+						</div>
+						<div class="content">
+							<h3>Manage Products</h3>
+							<p>Cancel and update all products at anytime with one click.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-phone"></span> <a href="#">(667) 214-9727</a></li>
+						<li><span class="icon fa-envelope"></span> <a href="#">info@ekart.com</a></li>
+						<li><span class="icon fa-map-marker"></span> 123 Cherry Hill Road, Hyatsville, MD 20742</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. Design <a href="https://templated.co">EKART</a>. Images
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'order/js/jquery.min.js' %}"></script>
+			<script src="{% static 'order/js/scrolly.min.js' %}"></script>
+			<script src="{% static 'order/js/skel.min.js' %}"></script>
+			<script src="{% static 'order/js/util.js' %}"></script>
+			<script src="{% static 'order/js/main.js' %}"></script>
+
+	</body>
+</html>

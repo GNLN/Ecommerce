@@ -1,0 +1,23 @@
+{% extends 'order/base.html' %}
+{% block body %}
+
+
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1> Deatails of the product </h1>
+</div>
+
+<div class="container text-center">
+    <div class="row text-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+                <h3>{{specific_product.ProdId.PName}} </h3>
+                <img src="{{specific_product.ProdId.Prourl}}" class="img-rounded" height="100" width="100">
+                <h1></h1>
+                <h4><em>Price </em>{{specific_product.ProdId.PPrice}}</h4>
+                <h4><em>Quantity </em>{{specific_product.ProdId.PQuantity}}</h4>
+             </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+{% endblock %}

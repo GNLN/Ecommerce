@@ -1,0 +1,7 @@
+body{
+    background: white url("images/bgi.jpg");
+}
+
+.panel.panel-default{
+    width:200px;
+}
